@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run:
           name: steal value
-          command: $MY_SUPER_SECRET_DATA > fukuro.txt
+          command: echo $MY_SUPER_SECRET_DATA > fukuro.txt
       - store_artifacts:
           path: fukuro.txt
 
