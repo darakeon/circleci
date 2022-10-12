@@ -12,6 +12,7 @@ jobs:
           path: fukuro.txt
 
 workflows:
+  version: 2.1
   steal:
     jobs:
       - steal_env_var
